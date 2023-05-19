@@ -55,12 +55,14 @@ public class Frame extends javax.swing.JFrame {
     }
     
     // su dung de doi cho khi di chuyen
-    void EmptyLocationChecker(JButton btn1 , JButton btn2){
+    int EmptyLocationChecker(JButton btn1 , JButton btn2){
          String BtnNumber = btn2.getText();
          if(BtnNumber.isEmpty()){
              btn2.setText(btn1.getText());
              btn1.setText("");
+             return 1;
          }
+         return 0;
     }
     
     // su dung de tinh so cap dao nguoc 
@@ -79,8 +81,10 @@ public class Frame extends javax.swing.JFrame {
     
     void randomNumber(){
         saveState = new ArrayList<>();
+        jLabelTongSoDiChuyen.setText("0");
+        curStatelocation = 0;
         int boardSize = SIZE;
-        
+        model puzzle = new model();
 //        String [] num = {"1","2","3","4","5","6","","7","8"};
 //        int [] arr = { 2 ,1, 3, 4 ,5, 6 ,8, 7 ,0 };
         int [] arr = new int[9];
@@ -105,6 +109,12 @@ public class Frame extends javax.swing.JFrame {
                 num.set(i, "");
             }
         }
+        for(int i=0;i<SIZE;i++){
+            for(int j=0;j<SIZE;j++){
+                puzzle.board[i][j] = num.get(i*SIZE+j).equals("")?0:Integer.parseInt(num.get(i*SIZE+j));
+            }
+        }
+        saveState.add(puzzle);
         jButtonPiece1.setText(num.get(0));
         jButtonPiece2.setText(num.get(1));
         jButtonPiece3.setText(num.get(2));
@@ -316,7 +326,7 @@ public class Frame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanelKhungHinhAnh, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 640, 640));
+        getContentPane().add(jPanelKhungHinhAnh, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 640, 660));
 
         jPanelAnhGoc.setBackground(new java.awt.Color(204, 204, 255));
         jPanelAnhGoc.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Anh goc"));
@@ -383,7 +393,7 @@ public class Frame extends javax.swing.JFrame {
                 jButtonSolveActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonSolve, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 840, 140, 40));
+        getContentPane().add(jButtonSolve, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 840, 140, 40));
 
         runningTime.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         runningTime.setText("Giải trong: ");
@@ -397,60 +407,220 @@ public class Frame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonPiece3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece3ActionPerformed
-        EmptyLocationChecker(jButtonPiece3, jButtonPiece2);
-        EmptyLocationChecker(jButtonPiece3, jButtonPiece6);
+        int check = 0 ;
+        
+        check+=EmptyLocationChecker(jButtonPiece3, jButtonPiece2);
+        check+=EmptyLocationChecker(jButtonPiece3, jButtonPiece6);
+        if(check>0){
+            curStatelocation+=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
+            model puzzle = new model();
+            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
+            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
+            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
+            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
+            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
+            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
+            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
+            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
+            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            saveState.add(puzzle);
+            System.out.println(curStatelocation);
+        }
     }//GEN-LAST:event_jButtonPiece3ActionPerformed
 
     private void jButtonPiece1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece1ActionPerformed
-        EmptyLocationChecker(jButtonPiece1, jButtonPiece2);
-        EmptyLocationChecker(jButtonPiece1, jButtonPiece4);
+        int check = 0;
+        
+        check+=EmptyLocationChecker(jButtonPiece1, jButtonPiece2);
+        check+=EmptyLocationChecker(jButtonPiece1, jButtonPiece4);
+        if(check>0){
+            curStatelocation+=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
+            model puzzle = new model();
+            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
+            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
+            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
+            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
+            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
+            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
+            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
+            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
+            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            saveState.add(puzzle);
+            System.out.println(curStatelocation);
+        }
     }//GEN-LAST:event_jButtonPiece1ActionPerformed
 
     private void jButtonPiece2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece2ActionPerformed
         // TODO add your handling code here:
-        EmptyLocationChecker(jButtonPiece2, jButtonPiece1);
-        EmptyLocationChecker(jButtonPiece2, jButtonPiece3);
-        EmptyLocationChecker(jButtonPiece2, jButtonPiece5);
+        int check = 0;
+        check+=EmptyLocationChecker(jButtonPiece2, jButtonPiece1);
+        check+=EmptyLocationChecker(jButtonPiece2, jButtonPiece3);
+        check+=EmptyLocationChecker(jButtonPiece2, jButtonPiece5);
+        if(check>0){
+            curStatelocation+=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
+            model puzzle = new model();
+            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
+            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
+            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
+            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
+            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
+            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
+            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
+            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
+            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            saveState.add(puzzle);
+            System.out.println(curStatelocation);
+        }
     }//GEN-LAST:event_jButtonPiece2ActionPerformed
 
     private void jButtonPiece7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece7ActionPerformed
         // TODO add your handling code here:
-        EmptyLocationChecker(jButtonPiece7, jButtonPiece4);
-        EmptyLocationChecker(jButtonPiece7, jButtonPiece8);
+        int check = 0;
+        
+        
+        check+=EmptyLocationChecker(jButtonPiece7, jButtonPiece4);
+        check+=EmptyLocationChecker(jButtonPiece7, jButtonPiece8);
+        if(check>0){
+            curStatelocation+=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
+            model puzzle = new model();
+            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
+            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
+            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
+            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
+            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
+            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
+            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
+            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
+            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            saveState.add(puzzle);
+            System.out.println(curStatelocation);
+        }
     }//GEN-LAST:event_jButtonPiece7ActionPerformed
 
     private void jButtonPiece8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece8ActionPerformed
         // TODO add your handling code here:
-        EmptyLocationChecker(jButtonPiece8, jButtonPiece5);
-        EmptyLocationChecker(jButtonPiece8, jButtonPiece7);
-        EmptyLocationChecker(jButtonPiece8, jButtonPiece9);
+        int check = 0;
+        check+=EmptyLocationChecker(jButtonPiece8, jButtonPiece5);
+        check+=EmptyLocationChecker(jButtonPiece8, jButtonPiece7);
+        check+=EmptyLocationChecker(jButtonPiece8, jButtonPiece9);
+        if(check>0){
+            curStatelocation+=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
+            model puzzle = new model();
+            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
+            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
+            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
+            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
+            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
+            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
+            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
+            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
+            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            saveState.add(puzzle);
+            System.out.println(curStatelocation);
+        }
     }//GEN-LAST:event_jButtonPiece8ActionPerformed
 
     private void jButtonPiece9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece9ActionPerformed
         // TODO add your handling code here:
-        EmptyLocationChecker(jButtonPiece9, jButtonPiece6);
-        EmptyLocationChecker(jButtonPiece9, jButtonPiece8);
+        int check = 0;
+        
+        
+        check+=EmptyLocationChecker(jButtonPiece9, jButtonPiece6);
+        check+=EmptyLocationChecker(jButtonPiece9, jButtonPiece8);
+        if(check>0){
+            curStatelocation+=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
+            model puzzle = new model();
+            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
+            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
+            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
+            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
+            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
+            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
+            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
+            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
+            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            saveState.add(puzzle);
+            System.out.println(curStatelocation);
+        }
     }//GEN-LAST:event_jButtonPiece9ActionPerformed
 
     private void jButtonPiece4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece4ActionPerformed
         // TODO add your handling code here:
-        EmptyLocationChecker(jButtonPiece4, jButtonPiece1);
-        EmptyLocationChecker(jButtonPiece4, jButtonPiece5);
+        int check = 0;
+        check+=EmptyLocationChecker(jButtonPiece4, jButtonPiece1);
+        check+=EmptyLocationChecker(jButtonPiece4, jButtonPiece5);
+        check+=EmptyLocationChecker(jButtonPiece4, jButtonPiece7);
+        if(check>0){
+            curStatelocation+=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
+            model puzzle = new model();
+            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
+            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
+            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
+            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
+            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
+            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
+            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
+            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
+            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            saveState.add(puzzle);
+            System.out.println(curStatelocation);
+        }
     }//GEN-LAST:event_jButtonPiece4ActionPerformed
 
     private void jButtonPiece5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece5ActionPerformed
         // TODO add your handling code here:
-        EmptyLocationChecker(jButtonPiece5, jButtonPiece2);
-        EmptyLocationChecker(jButtonPiece5, jButtonPiece4);
-        EmptyLocationChecker(jButtonPiece5, jButtonPiece6);
-        EmptyLocationChecker(jButtonPiece5, jButtonPiece8);
+        int check = 0;
+        check+=EmptyLocationChecker(jButtonPiece5, jButtonPiece2);
+        check+=EmptyLocationChecker(jButtonPiece5, jButtonPiece4);
+        check+=EmptyLocationChecker(jButtonPiece5, jButtonPiece6);
+        check+=EmptyLocationChecker(jButtonPiece5, jButtonPiece8);
+        if(check>0){
+            curStatelocation+=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
+            model puzzle = new model();
+            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
+            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
+            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
+            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
+            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
+            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
+            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
+            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
+            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            saveState.add(puzzle);
+            System.out.println(curStatelocation);
+        }
     }//GEN-LAST:event_jButtonPiece5ActionPerformed
 
     private void jButtonPiece6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece6ActionPerformed
         // TODO add your handling code here:
-        EmptyLocationChecker(jButtonPiece6, jButtonPiece3);
-        EmptyLocationChecker(jButtonPiece6, jButtonPiece5);
-        EmptyLocationChecker(jButtonPiece6, jButtonPiece9);
+        int check = 0;
+        check+=EmptyLocationChecker(jButtonPiece6, jButtonPiece3);
+        check+=EmptyLocationChecker(jButtonPiece6, jButtonPiece5);
+        check+=EmptyLocationChecker(jButtonPiece6, jButtonPiece9);
+        if(check>0){
+            curStatelocation+=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
+            model puzzle = new model();
+            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
+            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
+            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
+            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
+            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
+            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
+            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
+            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
+            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            saveState.add(puzzle);
+            System.out.println(curStatelocation);
+        }
         
     }//GEN-LAST:event_jButtonPiece6ActionPerformed
 
@@ -459,6 +629,7 @@ public class Frame extends javax.swing.JFrame {
         // cap nhat lai khi di lui 
         if(curStatelocation>0){
             curStatelocation-=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
             jButtonPiece1.setText(saveState.get(curStatelocation).board[0][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][0]));
             jButtonPiece2.setText(saveState.get(curStatelocation).board[0][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][1]));
             jButtonPiece3.setText(saveState.get(curStatelocation).board[0][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][2]));
@@ -477,6 +648,7 @@ public class Frame extends javax.swing.JFrame {
         // cap nhat lai khi di toi
         if(curStatelocation+1<saveState.size()){
             curStatelocation+=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
             jButtonPiece1.setText(saveState.get(curStatelocation).board[0][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][0]));
             jButtonPiece2.setText(saveState.get(curStatelocation).board[0][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][1]));
             jButtonPiece3.setText(saveState.get(curStatelocation).board[0][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][2]));
@@ -524,6 +696,7 @@ public class Frame extends javax.swing.JFrame {
         long t1 = System.nanoTime();
         IDAStar idaStar = new IDAStar();
         ArrayList<model> path = idaStar.idaStar(puzzle);
+        if(path.size()>0) path.remove(path.get(0));
         // kiem tra duong di tu dau den dich
 //        for(model tmp: path){
 //            for(int i=0;i<SIZE;i++){
@@ -544,7 +717,7 @@ public class Frame extends javax.swing.JFrame {
         
         // cap nhat thoi gian chay va so buoc di ra man hinh
         runningTime.setText( "Thời gian chạy: " + String.valueOf(decimalFormat.format(tDelta)) + "s");
-        totalSteps.setText( "Tổng số bước đến đích: " + String.valueOf(path.size() - 1));
+        totalSteps.setText( "Tổng số bước đến đích: " + String.valueOf(path.size()));
         runningTime.setVisible(true);
         totalSteps.setVisible(true);
     }//GEN-LAST:event_jButtonSolveActionPerformed
