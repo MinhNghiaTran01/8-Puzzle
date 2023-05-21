@@ -115,15 +115,15 @@ public class Frame extends javax.swing.JFrame {
             }
         }
         saveState.add(puzzle);
-        jButtonPiece1.setText(num.get(0));
-        jButtonPiece2.setText(num.get(1));
-        jButtonPiece3.setText(num.get(2));
-        jButtonPiece4.setText(num.get(3));
-        jButtonPiece5.setText(num.get(4));
-        jButtonPiece6.setText(num.get(5));
-        jButtonPiece7.setText(num.get(6));
-        jButtonPiece8.setText(num.get(7));
-        jButtonPiece9.setText(num.get(8));
+        btnBox1.setText(num.get(0));
+        btnBox2.setText(num.get(1));
+        btnBox3.setText(num.get(2));
+        btnBox4.setText(num.get(3));
+        btnBox5.setText(num.get(4));
+        btnBox6.setText(num.get(5));
+        btnBox7.setText(num.get(6));
+        btnBox8.setText(num.get(7));
+        btnBox9.setText(num.get(8));
         
         
 //        jButtonPiece1.setText(num[0]);
@@ -148,16 +148,15 @@ public class Frame extends javax.swing.JFrame {
         jPanelTieuDe = new javax.swing.JPanel();
         jLabelTieuDe = new javax.swing.JLabel();
         jPanelKhungHinhAnh = new javax.swing.JPanel();
-        jButtonPiece3 = new javax.swing.JButton();
-        jButtonPiece1 = new javax.swing.JButton();
-        jButtonPiece2 = new javax.swing.JButton();
-        jButtonPiece8 = new javax.swing.JButton();
-        jButtonPiece7 = new javax.swing.JButton();
-        jButtonPiece9 = new javax.swing.JButton();
-        jButtonPiece4 = new javax.swing.JButton();
-        jButtonPiece5 = new javax.swing.JButton();
-        jButtonPiece6 = new javax.swing.JButton();
-        jPanelAnhGoc = new javax.swing.JPanel();
+        btnBox3 = new javax.swing.JButton();
+        btnBox1 = new javax.swing.JButton();
+        btnBox2 = new javax.swing.JButton();
+        btnBox8 = new javax.swing.JButton();
+        btnBox7 = new javax.swing.JButton();
+        btnBox9 = new javax.swing.JButton();
+        btnBox4 = new javax.swing.JButton();
+        btnBox5 = new javax.swing.JButton();
+        btnBox6 = new javax.swing.JButton();
         labelSoBuocDiChuyen = new javax.swing.JLabel();
         jButtonDiLui = new javax.swing.JButton();
         jButtonDiToi = new javax.swing.JButton();
@@ -167,6 +166,16 @@ public class Frame extends javax.swing.JFrame {
         jButtonSolve = new javax.swing.JButton();
         runningTime = new javax.swing.JLabel();
         totalSteps = new javax.swing.JLabel();
+        jPanelKhungHinhAnh1 = new javax.swing.JPanel();
+        btnDich3 = new javax.swing.JButton();
+        btnDich1 = new javax.swing.JButton();
+        btnDich2 = new javax.swing.JButton();
+        btnDich8 = new javax.swing.JButton();
+        btnDich7 = new javax.swing.JButton();
+        btnDich9 = new javax.swing.JButton();
+        btnDich4 = new javax.swing.JButton();
+        btnDich5 = new javax.swing.JButton();
+        btnDich6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -185,96 +194,96 @@ public class Frame extends javax.swing.JFrame {
             .addGroup(jPanelTieuDeLayout.createSequentialGroup()
                 .addGap(362, 362, 362)
                 .addComponent(jLabelTieuDe, javax.swing.GroupLayout.PREFERRED_SIZE, 769, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(417, Short.MAX_VALUE))
+                .addContainerGap(767, Short.MAX_VALUE))
         );
         jPanelTieuDeLayout.setVerticalGroup(
             jPanelTieuDeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabelTieuDe, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanelTieuDe, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1550, -1));
+        getContentPane().add(jPanelTieuDe, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1900, -1));
 
         jPanelKhungHinhAnh.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelKhungHinhAnh.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Khung"));
+        jPanelKhungHinhAnh.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Trạng thái hiện tại"));
         jPanelKhungHinhAnh.setForeground(new java.awt.Color(0, 51, 255));
 
-        jButtonPiece3.setBackground(new java.awt.Color(204, 204, 255));
-        jButtonPiece3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButtonPiece3.setText("3");
-        jButtonPiece3.addActionListener(new java.awt.event.ActionListener() {
+        btnBox3.setBackground(new java.awt.Color(255, 255, 204));
+        btnBox3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnBox3.setText("3");
+        btnBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPiece3ActionPerformed(evt);
+                btnBox3ActionPerformed(evt);
             }
         });
 
-        jButtonPiece1.setBackground(new java.awt.Color(204, 204, 255));
-        jButtonPiece1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButtonPiece1.setText("1");
-        jButtonPiece1.addActionListener(new java.awt.event.ActionListener() {
+        btnBox1.setBackground(new java.awt.Color(255, 255, 204));
+        btnBox1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnBox1.setText("1");
+        btnBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPiece1ActionPerformed(evt);
+                btnBox1ActionPerformed(evt);
             }
         });
 
-        jButtonPiece2.setBackground(new java.awt.Color(204, 204, 255));
-        jButtonPiece2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButtonPiece2.setText("2");
-        jButtonPiece2.addActionListener(new java.awt.event.ActionListener() {
+        btnBox2.setBackground(new java.awt.Color(255, 255, 204));
+        btnBox2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnBox2.setText("2");
+        btnBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPiece2ActionPerformed(evt);
+                btnBox2ActionPerformed(evt);
             }
         });
 
-        jButtonPiece8.setBackground(new java.awt.Color(204, 204, 255));
-        jButtonPiece8.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButtonPiece8.setText("8");
-        jButtonPiece8.addActionListener(new java.awt.event.ActionListener() {
+        btnBox8.setBackground(new java.awt.Color(255, 255, 204));
+        btnBox8.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnBox8.setText("7");
+        btnBox8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPiece8ActionPerformed(evt);
+                btnBox8ActionPerformed(evt);
             }
         });
 
-        jButtonPiece7.setBackground(new java.awt.Color(204, 204, 255));
-        jButtonPiece7.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButtonPiece7.setText("7");
-        jButtonPiece7.addActionListener(new java.awt.event.ActionListener() {
+        btnBox7.setBackground(new java.awt.Color(255, 255, 204));
+        btnBox7.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnBox7.setText("8");
+        btnBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPiece7ActionPerformed(evt);
+                btnBox7ActionPerformed(evt);
             }
         });
 
-        jButtonPiece9.setBackground(new java.awt.Color(204, 204, 255));
-        jButtonPiece9.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButtonPiece9.addActionListener(new java.awt.event.ActionListener() {
+        btnBox9.setBackground(new java.awt.Color(255, 255, 204));
+        btnBox9.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnBox9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPiece9ActionPerformed(evt);
+                btnBox9ActionPerformed(evt);
             }
         });
 
-        jButtonPiece4.setBackground(new java.awt.Color(204, 204, 255));
-        jButtonPiece4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButtonPiece4.setText("4");
-        jButtonPiece4.addActionListener(new java.awt.event.ActionListener() {
+        btnBox4.setBackground(new java.awt.Color(255, 255, 204));
+        btnBox4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnBox4.setText("4");
+        btnBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPiece4ActionPerformed(evt);
+                btnBox4ActionPerformed(evt);
             }
         });
 
-        jButtonPiece5.setBackground(new java.awt.Color(204, 204, 255));
-        jButtonPiece5.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButtonPiece5.setText("5");
-        jButtonPiece5.addActionListener(new java.awt.event.ActionListener() {
+        btnBox5.setBackground(new java.awt.Color(255, 255, 204));
+        btnBox5.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnBox5.setText("5");
+        btnBox5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPiece5ActionPerformed(evt);
+                btnBox5ActionPerformed(evt);
             }
         });
 
-        jButtonPiece6.setBackground(new java.awt.Color(204, 204, 255));
-        jButtonPiece6.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButtonPiece6.setText("6");
-        jButtonPiece6.addActionListener(new java.awt.event.ActionListener() {
+        btnBox6.setBackground(new java.awt.Color(255, 255, 204));
+        btnBox6.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnBox6.setText("6");
+        btnBox6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPiece6ActionPerformed(evt);
+                btnBox6ActionPerformed(evt);
             }
         });
 
@@ -286,63 +295,47 @@ public class Frame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanelKhungHinhAnhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelKhungHinhAnhLayout.createSequentialGroup()
-                        .addComponent(jButtonPiece1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonPiece2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonPiece3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelKhungHinhAnhLayout.createSequentialGroup()
-                        .addComponent(jButtonPiece4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonPiece5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonPiece6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelKhungHinhAnhLayout.createSequentialGroup()
-                        .addComponent(jButtonPiece7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonPiece8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonPiece9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanelKhungHinhAnhLayout.setVerticalGroup(
             jPanelKhungHinhAnhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelKhungHinhAnhLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelKhungHinhAnhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonPiece1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonPiece2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonPiece3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelKhungHinhAnhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonPiece4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonPiece5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonPiece6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelKhungHinhAnhLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonPiece7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonPiece8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonPiece9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanelKhungHinhAnh, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 640, 660));
-
-        jPanelAnhGoc.setBackground(new java.awt.Color(204, 204, 255));
-        jPanelAnhGoc.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Anh goc"));
-
-        javax.swing.GroupLayout jPanelAnhGocLayout = new javax.swing.GroupLayout(jPanelAnhGoc);
-        jPanelAnhGoc.setLayout(jPanelAnhGocLayout);
-        jPanelAnhGocLayout.setHorizontalGroup(
-            jPanelAnhGocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
-        );
-        jPanelAnhGocLayout.setVerticalGroup(
-            jPanelAnhGocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 622, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanelAnhGoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 150, 640, 650));
+        getContentPane().add(jPanelKhungHinhAnh, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 640, 660));
 
         labelSoBuocDiChuyen.setBackground(new java.awt.Color(255, 51, 51));
         labelSoBuocDiChuyen.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -357,7 +350,7 @@ public class Frame extends javax.swing.JFrame {
                 jButtonDiLuiActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonDiLui, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 850, 130, 40));
+        getContentPane().add(jButtonDiLui, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 850, 130, 40));
 
         jButtonDiToi.setBackground(new java.awt.Color(255, 204, 153));
         jButtonDiToi.setText(" Đi tới>>");
@@ -366,7 +359,7 @@ public class Frame extends javax.swing.JFrame {
                 jButtonDiToiActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonDiToi, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 850, 130, 40));
+        getContentPane().add(jButtonDiToi, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 850, 130, 40));
 
         jLabelTongSoDiChuyen.setBackground(new java.awt.Color(102, 51, 255));
         jLabelTongSoDiChuyen.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -377,7 +370,7 @@ public class Frame extends javax.swing.JFrame {
         getContentPane().add(jLabelTongSoDiChuyen, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 850, 100, -1));
 
         jButtonOut.setText("Out");
-        getContentPane().add(jButtonOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1550, 840, 140, 40));
+        getContentPane().add(jButtonOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(1690, 830, 130, 50));
 
         jButtonPlayAgain.setText("play again");
         jButtonPlayAgain.addActionListener(new java.awt.event.ActionListener() {
@@ -385,7 +378,7 @@ public class Frame extends javax.swing.JFrame {
                 jButtonPlayAgainActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonPlayAgain, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 840, 140, 40));
+        getContentPane().add(jButtonPlayAgain, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 830, 130, 50));
 
         jButtonSolve.setText("Solve");
         jButtonSolve.addActionListener(new java.awt.event.ActionListener() {
@@ -393,236 +386,370 @@ public class Frame extends javax.swing.JFrame {
                 jButtonSolveActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonSolve, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 840, 140, 40));
+        getContentPane().add(jButtonSolve, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 830, 120, 50));
 
         runningTime.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         runningTime.setText("Giải trong: ");
-        getContentPane().add(runningTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 160, 370, 40));
+        getContentPane().add(runningTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 160, 370, 40));
 
         totalSteps.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        totalSteps.setText("Số bước đi đến đích");
-        getContentPane().add(totalSteps, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 210, 380, 40));
+        totalSteps.setText("Số bước đi đến đích:");
+        getContentPane().add(totalSteps, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 230, 380, 40));
+
+        jPanelKhungHinhAnh1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelKhungHinhAnh1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Trạng thái đích"));
+        jPanelKhungHinhAnh1.setForeground(new java.awt.Color(0, 51, 255));
+
+        btnDich3.setBackground(new java.awt.Color(204, 204, 255));
+        btnDich3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnDich3.setText("3");
+        btnDich3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDich3ActionPerformed(evt);
+            }
+        });
+
+        btnDich1.setBackground(new java.awt.Color(204, 204, 255));
+        btnDich1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnDich1.setText("1");
+        btnDich1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDich1ActionPerformed(evt);
+            }
+        });
+
+        btnDich2.setBackground(new java.awt.Color(204, 204, 255));
+        btnDich2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnDich2.setText("2");
+        btnDich2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDich2ActionPerformed(evt);
+            }
+        });
+
+        btnDich8.setBackground(new java.awt.Color(204, 204, 255));
+        btnDich8.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnDich8.setText("8");
+        btnDich8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDich8ActionPerformed(evt);
+            }
+        });
+
+        btnDich7.setBackground(new java.awt.Color(204, 204, 255));
+        btnDich7.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnDich7.setText("7");
+        btnDich7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDich7ActionPerformed(evt);
+            }
+        });
+
+        btnDich9.setBackground(new java.awt.Color(204, 204, 255));
+        btnDich9.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnDich9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDich9ActionPerformed(evt);
+            }
+        });
+
+        btnDich4.setBackground(new java.awt.Color(204, 204, 255));
+        btnDich4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnDich4.setText("4");
+        btnDich4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDich4ActionPerformed(evt);
+            }
+        });
+
+        btnDich5.setBackground(new java.awt.Color(204, 204, 255));
+        btnDich5.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnDich5.setText("5");
+        btnDich5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDich5ActionPerformed(evt);
+            }
+        });
+
+        btnDich6.setBackground(new java.awt.Color(204, 204, 255));
+        btnDich6.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnDich6.setText("6");
+        btnDich6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDich6ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelKhungHinhAnh1Layout = new javax.swing.GroupLayout(jPanelKhungHinhAnh1);
+        jPanelKhungHinhAnh1.setLayout(jPanelKhungHinhAnh1Layout);
+        jPanelKhungHinhAnh1Layout.setHorizontalGroup(
+            jPanelKhungHinhAnh1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelKhungHinhAnh1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelKhungHinhAnh1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelKhungHinhAnh1Layout.createSequentialGroup()
+                        .addComponent(btnDich1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnDich2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnDich3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelKhungHinhAnh1Layout.createSequentialGroup()
+                        .addComponent(btnDich4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnDich5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnDich6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelKhungHinhAnh1Layout.createSequentialGroup()
+                        .addComponent(btnDich7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnDich8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnDich9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+        jPanelKhungHinhAnh1Layout.setVerticalGroup(
+            jPanelKhungHinhAnh1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelKhungHinhAnh1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelKhungHinhAnh1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDich1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDich2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDich3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelKhungHinhAnh1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDich4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDich5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDich6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelKhungHinhAnh1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDich7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDich8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDich9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanelKhungHinhAnh1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 150, 640, 660));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonPiece3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece3ActionPerformed
+    private void btnBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox3ActionPerformed
         int check = 0 ;
         
-        check+=EmptyLocationChecker(jButtonPiece3, jButtonPiece2);
-        check+=EmptyLocationChecker(jButtonPiece3, jButtonPiece6);
+        check+=EmptyLocationChecker(btnBox3, btnBox2);
+        check+=EmptyLocationChecker(btnBox3, btnBox6);
         if(check>0){
             curStatelocation+=1;
             jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
             model puzzle = new model();
-            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
-            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
-            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
-            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
-            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
-            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
-            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
-            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
-            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            puzzle.board[0][0] = btnBox1.getText().equals("")?0:Integer.parseInt(btnBox1.getText());
+            puzzle.board[0][1] = btnBox2.getText().equals("")?0:Integer.parseInt(btnBox2.getText());
+            puzzle.board[0][2] = btnBox3.getText().equals("")?0:Integer.parseInt(btnBox3.getText());
+            puzzle.board[1][0] = btnBox4.getText().equals("")?0:Integer.parseInt(btnBox4.getText());
+            puzzle.board[1][1] = btnBox5.getText().equals("")?0:Integer.parseInt(btnBox5.getText());
+            puzzle.board[1][2] = btnBox6.getText().equals("")?0:Integer.parseInt(btnBox6.getText());
+            puzzle.board[2][0] = btnBox7.getText().equals("")?0:Integer.parseInt(btnBox7.getText());
+            puzzle.board[2][1] = btnBox8.getText().equals("")?0:Integer.parseInt(btnBox8.getText());
+            puzzle.board[2][2] = btnBox9.getText().equals("")?0:Integer.parseInt(btnBox9.getText());
             saveState.add(puzzle);
             System.out.println(curStatelocation);
         }
-    }//GEN-LAST:event_jButtonPiece3ActionPerformed
+    }//GEN-LAST:event_btnBox3ActionPerformed
 
-    private void jButtonPiece1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece1ActionPerformed
+    private void btnBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox1ActionPerformed
         int check = 0;
         
-        check+=EmptyLocationChecker(jButtonPiece1, jButtonPiece2);
-        check+=EmptyLocationChecker(jButtonPiece1, jButtonPiece4);
+        check+=EmptyLocationChecker(btnBox1, btnBox2);
+        check+=EmptyLocationChecker(btnBox1, btnBox4);
         if(check>0){
             curStatelocation+=1;
             jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
             model puzzle = new model();
-            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
-            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
-            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
-            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
-            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
-            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
-            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
-            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
-            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            puzzle.board[0][0] = btnBox1.getText().equals("")?0:Integer.parseInt(btnBox1.getText());
+            puzzle.board[0][1] = btnBox2.getText().equals("")?0:Integer.parseInt(btnBox2.getText());
+            puzzle.board[0][2] = btnBox3.getText().equals("")?0:Integer.parseInt(btnBox3.getText());
+            puzzle.board[1][0] = btnBox4.getText().equals("")?0:Integer.parseInt(btnBox4.getText());
+            puzzle.board[1][1] = btnBox5.getText().equals("")?0:Integer.parseInt(btnBox5.getText());
+            puzzle.board[1][2] = btnBox6.getText().equals("")?0:Integer.parseInt(btnBox6.getText());
+            puzzle.board[2][0] = btnBox7.getText().equals("")?0:Integer.parseInt(btnBox7.getText());
+            puzzle.board[2][1] = btnBox8.getText().equals("")?0:Integer.parseInt(btnBox8.getText());
+            puzzle.board[2][2] = btnBox9.getText().equals("")?0:Integer.parseInt(btnBox9.getText());
             saveState.add(puzzle);
             System.out.println(curStatelocation);
         }
-    }//GEN-LAST:event_jButtonPiece1ActionPerformed
+    }//GEN-LAST:event_btnBox1ActionPerformed
 
-    private void jButtonPiece2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece2ActionPerformed
+    private void btnBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox2ActionPerformed
         // TODO add your handling code here:
         int check = 0;
-        check+=EmptyLocationChecker(jButtonPiece2, jButtonPiece1);
-        check+=EmptyLocationChecker(jButtonPiece2, jButtonPiece3);
-        check+=EmptyLocationChecker(jButtonPiece2, jButtonPiece5);
+        check+=EmptyLocationChecker(btnBox2, btnBox1);
+        check+=EmptyLocationChecker(btnBox2, btnBox3);
+        check+=EmptyLocationChecker(btnBox2, btnBox5);
         if(check>0){
             curStatelocation+=1;
             jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
             model puzzle = new model();
-            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
-            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
-            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
-            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
-            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
-            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
-            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
-            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
-            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            puzzle.board[0][0] = btnBox1.getText().equals("")?0:Integer.parseInt(btnBox1.getText());
+            puzzle.board[0][1] = btnBox2.getText().equals("")?0:Integer.parseInt(btnBox2.getText());
+            puzzle.board[0][2] = btnBox3.getText().equals("")?0:Integer.parseInt(btnBox3.getText());
+            puzzle.board[1][0] = btnBox4.getText().equals("")?0:Integer.parseInt(btnBox4.getText());
+            puzzle.board[1][1] = btnBox5.getText().equals("")?0:Integer.parseInt(btnBox5.getText());
+            puzzle.board[1][2] = btnBox6.getText().equals("")?0:Integer.parseInt(btnBox6.getText());
+            puzzle.board[2][0] = btnBox7.getText().equals("")?0:Integer.parseInt(btnBox7.getText());
+            puzzle.board[2][1] = btnBox8.getText().equals("")?0:Integer.parseInt(btnBox8.getText());
+            puzzle.board[2][2] = btnBox9.getText().equals("")?0:Integer.parseInt(btnBox9.getText());
             saveState.add(puzzle);
             System.out.println(curStatelocation);
         }
-    }//GEN-LAST:event_jButtonPiece2ActionPerformed
+    }//GEN-LAST:event_btnBox2ActionPerformed
 
-    private void jButtonPiece7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece7ActionPerformed
-        // TODO add your handling code here:
-        int check = 0;
-        
-        
-        check+=EmptyLocationChecker(jButtonPiece7, jButtonPiece4);
-        check+=EmptyLocationChecker(jButtonPiece7, jButtonPiece8);
-        if(check>0){
-            curStatelocation+=1;
-            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
-            model puzzle = new model();
-            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
-            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
-            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
-            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
-            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
-            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
-            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
-            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
-            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
-            saveState.add(puzzle);
-            System.out.println(curStatelocation);
-        }
-    }//GEN-LAST:event_jButtonPiece7ActionPerformed
-
-    private void jButtonPiece8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece8ActionPerformed
-        // TODO add your handling code here:
-        int check = 0;
-        check+=EmptyLocationChecker(jButtonPiece8, jButtonPiece5);
-        check+=EmptyLocationChecker(jButtonPiece8, jButtonPiece7);
-        check+=EmptyLocationChecker(jButtonPiece8, jButtonPiece9);
-        if(check>0){
-            curStatelocation+=1;
-            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
-            model puzzle = new model();
-            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
-            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
-            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
-            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
-            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
-            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
-            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
-            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
-            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
-            saveState.add(puzzle);
-            System.out.println(curStatelocation);
-        }
-    }//GEN-LAST:event_jButtonPiece8ActionPerformed
-
-    private void jButtonPiece9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece9ActionPerformed
+    private void btnBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox7ActionPerformed
         // TODO add your handling code here:
         int check = 0;
         
         
-        check+=EmptyLocationChecker(jButtonPiece9, jButtonPiece6);
-        check+=EmptyLocationChecker(jButtonPiece9, jButtonPiece8);
+        check+=EmptyLocationChecker(btnBox7, btnBox4);
+        check+=EmptyLocationChecker(btnBox7, btnBox8);
         if(check>0){
             curStatelocation+=1;
             jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
             model puzzle = new model();
-            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
-            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
-            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
-            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
-            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
-            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
-            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
-            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
-            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            puzzle.board[0][0] = btnBox1.getText().equals("")?0:Integer.parseInt(btnBox1.getText());
+            puzzle.board[0][1] = btnBox2.getText().equals("")?0:Integer.parseInt(btnBox2.getText());
+            puzzle.board[0][2] = btnBox3.getText().equals("")?0:Integer.parseInt(btnBox3.getText());
+            puzzle.board[1][0] = btnBox4.getText().equals("")?0:Integer.parseInt(btnBox4.getText());
+            puzzle.board[1][1] = btnBox5.getText().equals("")?0:Integer.parseInt(btnBox5.getText());
+            puzzle.board[1][2] = btnBox6.getText().equals("")?0:Integer.parseInt(btnBox6.getText());
+            puzzle.board[2][0] = btnBox7.getText().equals("")?0:Integer.parseInt(btnBox7.getText());
+            puzzle.board[2][1] = btnBox8.getText().equals("")?0:Integer.parseInt(btnBox8.getText());
+            puzzle.board[2][2] = btnBox9.getText().equals("")?0:Integer.parseInt(btnBox9.getText());
             saveState.add(puzzle);
             System.out.println(curStatelocation);
         }
-    }//GEN-LAST:event_jButtonPiece9ActionPerformed
+    }//GEN-LAST:event_btnBox7ActionPerformed
 
-    private void jButtonPiece4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece4ActionPerformed
+    private void btnBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox8ActionPerformed
         // TODO add your handling code here:
         int check = 0;
-        check+=EmptyLocationChecker(jButtonPiece4, jButtonPiece1);
-        check+=EmptyLocationChecker(jButtonPiece4, jButtonPiece5);
-        check+=EmptyLocationChecker(jButtonPiece4, jButtonPiece7);
+        check+=EmptyLocationChecker(btnBox8, btnBox5);
+        check+=EmptyLocationChecker(btnBox8, btnBox7);
+        check+=EmptyLocationChecker(btnBox8, btnBox9);
         if(check>0){
             curStatelocation+=1;
             jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
             model puzzle = new model();
-            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
-            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
-            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
-            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
-            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
-            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
-            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
-            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
-            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            puzzle.board[0][0] = btnBox1.getText().equals("")?0:Integer.parseInt(btnBox1.getText());
+            puzzle.board[0][1] = btnBox2.getText().equals("")?0:Integer.parseInt(btnBox2.getText());
+            puzzle.board[0][2] = btnBox3.getText().equals("")?0:Integer.parseInt(btnBox3.getText());
+            puzzle.board[1][0] = btnBox4.getText().equals("")?0:Integer.parseInt(btnBox4.getText());
+            puzzle.board[1][1] = btnBox5.getText().equals("")?0:Integer.parseInt(btnBox5.getText());
+            puzzle.board[1][2] = btnBox6.getText().equals("")?0:Integer.parseInt(btnBox6.getText());
+            puzzle.board[2][0] = btnBox7.getText().equals("")?0:Integer.parseInt(btnBox7.getText());
+            puzzle.board[2][1] = btnBox8.getText().equals("")?0:Integer.parseInt(btnBox8.getText());
+            puzzle.board[2][2] = btnBox9.getText().equals("")?0:Integer.parseInt(btnBox9.getText());
             saveState.add(puzzle);
             System.out.println(curStatelocation);
         }
-    }//GEN-LAST:event_jButtonPiece4ActionPerformed
+    }//GEN-LAST:event_btnBox8ActionPerformed
 
-    private void jButtonPiece5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece5ActionPerformed
+    private void btnBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox9ActionPerformed
         // TODO add your handling code here:
         int check = 0;
-        check+=EmptyLocationChecker(jButtonPiece5, jButtonPiece2);
-        check+=EmptyLocationChecker(jButtonPiece5, jButtonPiece4);
-        check+=EmptyLocationChecker(jButtonPiece5, jButtonPiece6);
-        check+=EmptyLocationChecker(jButtonPiece5, jButtonPiece8);
+        
+        
+        check+=EmptyLocationChecker(btnBox9, btnBox6);
+        check+=EmptyLocationChecker(btnBox9, btnBox8);
         if(check>0){
             curStatelocation+=1;
             jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
             model puzzle = new model();
-            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
-            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
-            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
-            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
-            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
-            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
-            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
-            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
-            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            puzzle.board[0][0] = btnBox1.getText().equals("")?0:Integer.parseInt(btnBox1.getText());
+            puzzle.board[0][1] = btnBox2.getText().equals("")?0:Integer.parseInt(btnBox2.getText());
+            puzzle.board[0][2] = btnBox3.getText().equals("")?0:Integer.parseInt(btnBox3.getText());
+            puzzle.board[1][0] = btnBox4.getText().equals("")?0:Integer.parseInt(btnBox4.getText());
+            puzzle.board[1][1] = btnBox5.getText().equals("")?0:Integer.parseInt(btnBox5.getText());
+            puzzle.board[1][2] = btnBox6.getText().equals("")?0:Integer.parseInt(btnBox6.getText());
+            puzzle.board[2][0] = btnBox7.getText().equals("")?0:Integer.parseInt(btnBox7.getText());
+            puzzle.board[2][1] = btnBox8.getText().equals("")?0:Integer.parseInt(btnBox8.getText());
+            puzzle.board[2][2] = btnBox9.getText().equals("")?0:Integer.parseInt(btnBox9.getText());
             saveState.add(puzzle);
             System.out.println(curStatelocation);
         }
-    }//GEN-LAST:event_jButtonPiece5ActionPerformed
+    }//GEN-LAST:event_btnBox9ActionPerformed
 
-    private void jButtonPiece6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPiece6ActionPerformed
+    private void btnBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox4ActionPerformed
         // TODO add your handling code here:
         int check = 0;
-        check+=EmptyLocationChecker(jButtonPiece6, jButtonPiece3);
-        check+=EmptyLocationChecker(jButtonPiece6, jButtonPiece5);
-        check+=EmptyLocationChecker(jButtonPiece6, jButtonPiece9);
+        check+=EmptyLocationChecker(btnBox4, btnBox1);
+        check+=EmptyLocationChecker(btnBox4, btnBox5);
+        check+=EmptyLocationChecker(btnBox4, btnBox7);
         if(check>0){
             curStatelocation+=1;
             jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
             model puzzle = new model();
-            puzzle.board[0][0] = jButtonPiece1.getText().equals("")?0:Integer.parseInt(jButtonPiece1.getText());
-            puzzle.board[0][1] = jButtonPiece2.getText().equals("")?0:Integer.parseInt(jButtonPiece2.getText());
-            puzzle.board[0][2] = jButtonPiece3.getText().equals("")?0:Integer.parseInt(jButtonPiece3.getText());
-            puzzle.board[1][0] = jButtonPiece4.getText().equals("")?0:Integer.parseInt(jButtonPiece4.getText());
-            puzzle.board[1][1] = jButtonPiece5.getText().equals("")?0:Integer.parseInt(jButtonPiece5.getText());
-            puzzle.board[1][2] = jButtonPiece6.getText().equals("")?0:Integer.parseInt(jButtonPiece6.getText());
-            puzzle.board[2][0] = jButtonPiece7.getText().equals("")?0:Integer.parseInt(jButtonPiece7.getText());
-            puzzle.board[2][1] = jButtonPiece8.getText().equals("")?0:Integer.parseInt(jButtonPiece8.getText());
-            puzzle.board[2][2] = jButtonPiece9.getText().equals("")?0:Integer.parseInt(jButtonPiece9.getText());
+            puzzle.board[0][0] = btnBox1.getText().equals("")?0:Integer.parseInt(btnBox1.getText());
+            puzzle.board[0][1] = btnBox2.getText().equals("")?0:Integer.parseInt(btnBox2.getText());
+            puzzle.board[0][2] = btnBox3.getText().equals("")?0:Integer.parseInt(btnBox3.getText());
+            puzzle.board[1][0] = btnBox4.getText().equals("")?0:Integer.parseInt(btnBox4.getText());
+            puzzle.board[1][1] = btnBox5.getText().equals("")?0:Integer.parseInt(btnBox5.getText());
+            puzzle.board[1][2] = btnBox6.getText().equals("")?0:Integer.parseInt(btnBox6.getText());
+            puzzle.board[2][0] = btnBox7.getText().equals("")?0:Integer.parseInt(btnBox7.getText());
+            puzzle.board[2][1] = btnBox8.getText().equals("")?0:Integer.parseInt(btnBox8.getText());
+            puzzle.board[2][2] = btnBox9.getText().equals("")?0:Integer.parseInt(btnBox9.getText());
+            saveState.add(puzzle);
+            System.out.println(curStatelocation);
+        }
+    }//GEN-LAST:event_btnBox4ActionPerformed
+
+    private void btnBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox5ActionPerformed
+        // TODO add your handling code here:
+        int check = 0;
+        check+=EmptyLocationChecker(btnBox5, btnBox2);
+        check+=EmptyLocationChecker(btnBox5, btnBox4);
+        check+=EmptyLocationChecker(btnBox5, btnBox6);
+        check+=EmptyLocationChecker(btnBox5, btnBox8);
+        if(check>0){
+            curStatelocation+=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
+            model puzzle = new model();
+            puzzle.board[0][0] = btnBox1.getText().equals("")?0:Integer.parseInt(btnBox1.getText());
+            puzzle.board[0][1] = btnBox2.getText().equals("")?0:Integer.parseInt(btnBox2.getText());
+            puzzle.board[0][2] = btnBox3.getText().equals("")?0:Integer.parseInt(btnBox3.getText());
+            puzzle.board[1][0] = btnBox4.getText().equals("")?0:Integer.parseInt(btnBox4.getText());
+            puzzle.board[1][1] = btnBox5.getText().equals("")?0:Integer.parseInt(btnBox5.getText());
+            puzzle.board[1][2] = btnBox6.getText().equals("")?0:Integer.parseInt(btnBox6.getText());
+            puzzle.board[2][0] = btnBox7.getText().equals("")?0:Integer.parseInt(btnBox7.getText());
+            puzzle.board[2][1] = btnBox8.getText().equals("")?0:Integer.parseInt(btnBox8.getText());
+            puzzle.board[2][2] = btnBox9.getText().equals("")?0:Integer.parseInt(btnBox9.getText());
+            saveState.add(puzzle);
+            System.out.println(curStatelocation);
+        }
+    }//GEN-LAST:event_btnBox5ActionPerformed
+
+    private void btnBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox6ActionPerformed
+        // TODO add your handling code here:
+        int check = 0;
+        check+=EmptyLocationChecker(btnBox6, btnBox3);
+        check+=EmptyLocationChecker(btnBox6, btnBox5);
+        check+=EmptyLocationChecker(btnBox6, btnBox9);
+        if(check>0){
+            curStatelocation+=1;
+            jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
+            model puzzle = new model();
+            puzzle.board[0][0] = btnBox1.getText().equals("")?0:Integer.parseInt(btnBox1.getText());
+            puzzle.board[0][1] = btnBox2.getText().equals("")?0:Integer.parseInt(btnBox2.getText());
+            puzzle.board[0][2] = btnBox3.getText().equals("")?0:Integer.parseInt(btnBox3.getText());
+            puzzle.board[1][0] = btnBox4.getText().equals("")?0:Integer.parseInt(btnBox4.getText());
+            puzzle.board[1][1] = btnBox5.getText().equals("")?0:Integer.parseInt(btnBox5.getText());
+            puzzle.board[1][2] = btnBox6.getText().equals("")?0:Integer.parseInt(btnBox6.getText());
+            puzzle.board[2][0] = btnBox7.getText().equals("")?0:Integer.parseInt(btnBox7.getText());
+            puzzle.board[2][1] = btnBox8.getText().equals("")?0:Integer.parseInt(btnBox8.getText());
+            puzzle.board[2][2] = btnBox9.getText().equals("")?0:Integer.parseInt(btnBox9.getText());
             saveState.add(puzzle);
             System.out.println(curStatelocation);
         }
         
-    }//GEN-LAST:event_jButtonPiece6ActionPerformed
+    }//GEN-LAST:event_btnBox6ActionPerformed
 
     private void jButtonDiLuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDiLuiActionPerformed
         // TODO add your handling code here:
@@ -630,15 +757,15 @@ public class Frame extends javax.swing.JFrame {
         if(curStatelocation>0){
             curStatelocation-=1;
             jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
-            jButtonPiece1.setText(saveState.get(curStatelocation).board[0][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][0]));
-            jButtonPiece2.setText(saveState.get(curStatelocation).board[0][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][1]));
-            jButtonPiece3.setText(saveState.get(curStatelocation).board[0][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][2]));
-            jButtonPiece4.setText(saveState.get(curStatelocation).board[1][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[1][0]));
-            jButtonPiece5.setText(saveState.get(curStatelocation).board[1][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[1][1]));
-            jButtonPiece6.setText(saveState.get(curStatelocation).board[1][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[1][2]));
-            jButtonPiece7.setText(saveState.get(curStatelocation).board[2][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[2][0]));
-            jButtonPiece8.setText(saveState.get(curStatelocation).board[2][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[2][1]));
-            jButtonPiece9.setText(saveState.get(curStatelocation).board[2][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[2][2]));
+            btnBox1.setText(saveState.get(curStatelocation).board[0][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][0]));
+            btnBox2.setText(saveState.get(curStatelocation).board[0][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][1]));
+            btnBox3.setText(saveState.get(curStatelocation).board[0][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][2]));
+            btnBox4.setText(saveState.get(curStatelocation).board[1][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[1][0]));
+            btnBox5.setText(saveState.get(curStatelocation).board[1][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[1][1]));
+            btnBox6.setText(saveState.get(curStatelocation).board[1][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[1][2]));
+            btnBox7.setText(saveState.get(curStatelocation).board[2][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[2][0]));
+            btnBox8.setText(saveState.get(curStatelocation).board[2][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[2][1]));
+            btnBox9.setText(saveState.get(curStatelocation).board[2][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[2][2]));
             
         }
     }//GEN-LAST:event_jButtonDiLuiActionPerformed
@@ -649,15 +776,15 @@ public class Frame extends javax.swing.JFrame {
         if(curStatelocation+1<saveState.size()){
             curStatelocation+=1;
             jLabelTongSoDiChuyen.setText(String.valueOf(curStatelocation));
-            jButtonPiece1.setText(saveState.get(curStatelocation).board[0][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][0]));
-            jButtonPiece2.setText(saveState.get(curStatelocation).board[0][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][1]));
-            jButtonPiece3.setText(saveState.get(curStatelocation).board[0][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][2]));
-            jButtonPiece4.setText(saveState.get(curStatelocation).board[1][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[1][0]));
-            jButtonPiece5.setText(saveState.get(curStatelocation).board[1][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[1][1]));
-            jButtonPiece6.setText(saveState.get(curStatelocation).board[1][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[1][2]));
-            jButtonPiece7.setText(saveState.get(curStatelocation).board[2][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[2][0]));
-            jButtonPiece8.setText(saveState.get(curStatelocation).board[2][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[2][1]));
-            jButtonPiece9.setText(saveState.get(curStatelocation).board[2][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[2][2]));
+            btnBox1.setText(saveState.get(curStatelocation).board[0][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][0]));
+            btnBox2.setText(saveState.get(curStatelocation).board[0][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][1]));
+            btnBox3.setText(saveState.get(curStatelocation).board[0][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[0][2]));
+            btnBox4.setText(saveState.get(curStatelocation).board[1][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[1][0]));
+            btnBox5.setText(saveState.get(curStatelocation).board[1][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[1][1]));
+            btnBox6.setText(saveState.get(curStatelocation).board[1][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[1][2]));
+            btnBox7.setText(saveState.get(curStatelocation).board[2][0]==0?"":String.valueOf(saveState.get(curStatelocation).board[2][0]));
+            btnBox8.setText(saveState.get(curStatelocation).board[2][1]==0?"":String.valueOf(saveState.get(curStatelocation).board[2][1]));
+            btnBox9.setText(saveState.get(curStatelocation).board[2][2]==0?"":String.valueOf(saveState.get(curStatelocation).board[2][2]));
         }
     }//GEN-LAST:event_jButtonDiToiActionPerformed
 
@@ -670,15 +797,15 @@ public class Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
         model puzzle = new model();
         // them trang thai hien tai vao puzzle.board de su dung thuat toan IDA* tim duong di
-        puzzle.board[0][0] = (jButtonPiece1.getText().equals("")) ? 0 : Integer.parseInt(jButtonPiece1.getText());
-        puzzle.board[0][1] = (jButtonPiece2.getText().equals("")) ? 0 : Integer.parseInt(jButtonPiece2.getText());
-        puzzle.board[0][2] = (jButtonPiece3.getText().equals("")) ? 0 : Integer.parseInt(jButtonPiece3.getText());
-        puzzle.board[1][0] = (jButtonPiece4.getText().equals("")) ? 0 : Integer.parseInt(jButtonPiece4.getText());
-        puzzle.board[1][1] = (jButtonPiece5.getText().equals("")) ? 0 : Integer.parseInt(jButtonPiece5.getText());
-        puzzle.board[1][2] = (jButtonPiece6.getText().equals("")) ? 0 : Integer.parseInt(jButtonPiece6.getText());
-        puzzle.board[2][0] = (jButtonPiece7.getText().equals("")) ? 0 : Integer.parseInt(jButtonPiece7.getText());
-        puzzle.board[2][1] = (jButtonPiece8.getText().equals("")) ? 0 : Integer.parseInt(jButtonPiece8.getText());
-        puzzle.board[2][2] = (jButtonPiece9.getText().equals("")) ? 0 : Integer.parseInt(jButtonPiece9.getText());
+        puzzle.board[0][0] = (btnBox1.getText().equals("")) ? 0 : Integer.parseInt(btnBox1.getText());
+        puzzle.board[0][1] = (btnBox2.getText().equals("")) ? 0 : Integer.parseInt(btnBox2.getText());
+        puzzle.board[0][2] = (btnBox3.getText().equals("")) ? 0 : Integer.parseInt(btnBox3.getText());
+        puzzle.board[1][0] = (btnBox4.getText().equals("")) ? 0 : Integer.parseInt(btnBox4.getText());
+        puzzle.board[1][1] = (btnBox5.getText().equals("")) ? 0 : Integer.parseInt(btnBox5.getText());
+        puzzle.board[1][2] = (btnBox6.getText().equals("")) ? 0 : Integer.parseInt(btnBox6.getText());
+        puzzle.board[2][0] = (btnBox7.getText().equals("")) ? 0 : Integer.parseInt(btnBox7.getText());
+        puzzle.board[2][1] = (btnBox8.getText().equals("")) ? 0 : Integer.parseInt(btnBox8.getText());
+        puzzle.board[2][2] = (btnBox9.getText().equals("")) ? 0 : Integer.parseInt(btnBox9.getText());
         
             
         // gan vi tri o trong hien tai vao blankPos cua puzzle
@@ -722,6 +849,42 @@ public class Frame extends javax.swing.JFrame {
         totalSteps.setVisible(true);
     }//GEN-LAST:event_jButtonSolveActionPerformed
 
+    private void btnDich3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDich3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDich3ActionPerformed
+
+    private void btnDich1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDich1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDich1ActionPerformed
+
+    private void btnDich2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDich2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDich2ActionPerformed
+
+    private void btnDich8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDich8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDich8ActionPerformed
+
+    private void btnDich7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDich7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDich7ActionPerformed
+
+    private void btnDich9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDich9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDich9ActionPerformed
+
+    private void btnDich4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDich4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDich4ActionPerformed
+
+    private void btnDich5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDich5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDich5ActionPerformed
+
+    private void btnDich6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDich6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDich6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -758,24 +921,33 @@ public class Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBox1;
+    private javax.swing.JButton btnBox2;
+    private javax.swing.JButton btnBox3;
+    private javax.swing.JButton btnBox4;
+    private javax.swing.JButton btnBox5;
+    private javax.swing.JButton btnBox6;
+    private javax.swing.JButton btnBox7;
+    private javax.swing.JButton btnBox8;
+    private javax.swing.JButton btnBox9;
+    private javax.swing.JButton btnDich1;
+    private javax.swing.JButton btnDich2;
+    private javax.swing.JButton btnDich3;
+    private javax.swing.JButton btnDich4;
+    private javax.swing.JButton btnDich5;
+    private javax.swing.JButton btnDich6;
+    private javax.swing.JButton btnDich7;
+    private javax.swing.JButton btnDich8;
+    private javax.swing.JButton btnDich9;
     private javax.swing.JButton jButtonDiLui;
     private javax.swing.JButton jButtonDiToi;
     private javax.swing.JButton jButtonOut;
-    private javax.swing.JButton jButtonPiece1;
-    private javax.swing.JButton jButtonPiece2;
-    private javax.swing.JButton jButtonPiece3;
-    private javax.swing.JButton jButtonPiece4;
-    private javax.swing.JButton jButtonPiece5;
-    private javax.swing.JButton jButtonPiece6;
-    private javax.swing.JButton jButtonPiece7;
-    private javax.swing.JButton jButtonPiece8;
-    private javax.swing.JButton jButtonPiece9;
     private javax.swing.JButton jButtonPlayAgain;
     private javax.swing.JButton jButtonSolve;
     private javax.swing.JLabel jLabelTieuDe;
     private javax.swing.JLabel jLabelTongSoDiChuyen;
-    private javax.swing.JPanel jPanelAnhGoc;
     private javax.swing.JPanel jPanelKhungHinhAnh;
+    private javax.swing.JPanel jPanelKhungHinhAnh1;
     private javax.swing.JPanel jPanelTieuDe;
     private javax.swing.JLabel labelSoBuocDiChuyen;
     private javax.swing.JLabel runningTime;

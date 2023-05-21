@@ -9,7 +9,7 @@ package view;
  * @author Nghia
  */
 
-public class model implements Cloneable{
+public class model {
     int [] UP = {-1, 0};
     int [] DOWN = {1, 0};
     int [] LEFT = {0,-1};
@@ -22,9 +22,6 @@ public class model implements Cloneable{
     public model() {
     }
     
-    public model(int [] state) {
-        
-    }
 
 
     public int[][] getBoard() {
@@ -91,7 +88,7 @@ public class model implements Cloneable{
         return true;
     }
     
-    // dung de 
+    // dung de chuyển đổi bảng từ dạng ma trận về dạng chuỗi String
     public String transfer(){
         String a ="";
         for(int i=0;i<boardSize;i++){

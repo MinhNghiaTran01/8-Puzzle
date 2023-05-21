@@ -5,6 +5,7 @@ public class IDAStar {
     
     int SIZE = 3;
     // Hàm tính h(n), hàm heuristic
+    // 1 8 3 6 2 4 7 5 0
     private static int heuristic(int[] state) {
         int manhattanDistance = 0;
         int SIZE = 3;
@@ -83,9 +84,8 @@ public class IDAStar {
         // su dung vong lap de duyet lai khi tat ca duong di deu vuot qua bound
         while (true) {
             int rem = search(savestate,path, 0, bound, dirs);
-            if (rem == 1) {
+            if (rem == -1) {
                 double tDelta = (System.nanoTime() - t1) / 1e9;
-                System.out.printf("Took %.2f seconds to find a solution of %d moves\n", tDelta, path.size() - 1);
                 return path;
             } else if (rem == Integer.MAX_VALUE) {
                 return null;
@@ -106,7 +106,7 @@ public class IDAStar {
             }
         }
         
-        // so buoc uoc tinh den dich
+        // so buoc uoc tinh từ trạng thái hiện tại den dich
         int f = g + heuristic(state);
         
         // neu vuot nguong thi return ve f
@@ -115,7 +115,7 @@ public class IDAStar {
         }
         // kiem tra xem trang thai hien tai co phai la dich hay khong
         if (cur.checkWin()) {
-            return 1;
+            return -1;
         }
         
         int min = Integer.MAX_VALUE;
@@ -151,8 +151,8 @@ public class IDAStar {
             // tim kiem tiep tu trang thai moi
             int t = search(savestate,path, g + 1, bound, dirs);
             
-            if (t == 1) {
-                return 1;
+            if (t == -1) {
+                return -1;
             }
             if (t < min) {
                 min = t;
